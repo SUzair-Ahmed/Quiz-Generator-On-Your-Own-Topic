@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<style>
+    .container{
+        box-shadow: 20px 20px 50px 15px grey;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Generate Quiz 🤖</h1>
+        <div class="form-group">
+            <label for="inputText">Enter the Quiz Topic:</label>
+            <input type="text" id="inputText" placeholder="Enter topic here...">
+        </div>
+        <div class="form-group">
+            <label for="noQues">No of Questions:</label>
+            <select id="noQues">
+                <option value="5">5</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+        <button id="generateBtn">Generate</button>
+        <div class="quizContainer" id="quizContainer"></div>
+    
+              
+        <button id="submitBtn" class="btnSubmit" style="display:none;">Submit Answers</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
